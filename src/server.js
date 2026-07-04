@@ -11,3 +11,30 @@ app.post("/api/chat", (req, res) => {
         response: "AI response generated"
     });
 });
+// History API
+app.get("/api/history", (req, res) => {
+    res.json({
+        history: []
+    });
+});
+
+// Users API
+app.get("/api/users", (req, res) => {
+    res.json({
+        users: []
+    });
+});
+
+// Feedback API
+app.post("/api/feedback", (req, res) => {
+    res.json({
+        message: "Feedback stored successfully"
+    });
+});
+
+// Health Check API
+app.get("/api/health", (req, res) => {
+    res.json({
+        status: "Server is running"
+    });
+});
