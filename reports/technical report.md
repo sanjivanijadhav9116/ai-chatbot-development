@@ -1,22 +1,33 @@
 # Technical Report
 
 ## Project
+
 AI Chatbot Development
 
-## Task 1
-Studied AI Client-Server Architecture and created the architecture diagram.
+## Project Objective
 
-## Task 2
-Designed API endpoints for chat, history, users, feedback and health check.
+The objective of this project is to develop an AI chatbot application using a client-server architecture. The system allows users to enter prompts through a frontend interface, sends the prompts to a backend server, processes them through an AI model layer, and displays the generated response to the user.
 
-## Task 3
-Developed the backend server using Node.js and Express.
+## System Architecture
 
-## Task 4
-Created the frontend interface using HTML, CSS and JavaScript.
+The AI chatbot system follows a client-server architecture consisting of the following layers:
 
-## Task 5
-Prepared documentation and updated the GitHub repository.
+- Client Layer: Provides the user interface and accepts user input.
+- Server Layer: Receives client requests and processes API requests.
+- AI Model Layer: Processes the user prompt and generates a response.
+- Database Layer: Designed as an optional future component for storing chat history, user information, and feedback.
 
-## Conclusion
-Successfully completed the design and development phase of the AI chatbot.
+The current implementation focuses on frontend-backend communication and the AI model layer.
+
+## Task 1: Implement Client-Server Communication
+
+The frontend was connected to the backend using the JavaScript Fetch API.
+
+The frontend sends the user prompt to the backend using the `POST /api/chat` endpoint.
+
+The request contains a JSON body:
+
+```json
+{
+  "prompt": "Hello"
+}
