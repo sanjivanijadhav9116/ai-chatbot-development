@@ -1,6 +1,202 @@
 [
   {
-    "question": "Explain AI",
+    "question": "How are you?",
+    "answer": "I'm doing great! How can I help you today?"
+  },
+  {
+    "question": "What is your name?",
+    "answer": "I am an AI chatbot created to help answer your questions."
+  },
+  {
+    "question": "Hello",
+    "answer": "Hello! It's nice to meet you. How can I help you?"
+  },
+  {
+    "question": "Hi",
+    "answer": "Hi! How are you doing today?"
+  },
+  {
+    "question": "Good morning",
+    "answer": "Good morning! I hope you have a wonderful day."
+  },
+  {
+    "question": "Good afternoon",
+    "answer": "Good afternoon! How is your day going?"
+  },
+  {
+    "question": "Good evening",
+    "answer": "Good evening! I hope you had a good day."
+  },
+  {
+    "question": "Good night",
+    "answer": "Good night! Have a peaceful sleep and take care."
+  },
+  {
+    "question": "Thank you",
+    "answer": "You're welcome! I'm always happy to help."
+  },
+  {
+    "question": "What can you do?",
+    "answer": "I can answer questions, explain concepts, provide information, and have conversations with you."
+  },
+  {
+    "question": "Can you help me?",
+    "answer": "Of course! Tell me what you need help with."
+  },
+  {
+    "question": "I am bored",
+    "answer": "You could watch a movie, listen to music, read a book, or try learning something new."
+  },
+  {
+    "question": "I am tired",
+    "answer": "You should take a short break, relax, and get enough rest."
+  },
+  {
+    "question": "I am feeling sad",
+    "answer": "I'm sorry to hear that. Would you like to talk about what is making you feel sad?"
+  },
+  {
+    "question": "Tell me a joke",
+    "answer": "Why did the computer go to the doctor? Because it had a virus!"
+  },
+  {
+    "question": "What should I do today?",
+    "answer": "You can plan your day by setting a few important goals and making time for activities you enjoy."
+  },
+  {
+    "question": "What is AI?",
     "answer": "Artificial Intelligence is the simulation of human intelligence by machines."
+  },
+  {
+    "question": "What is machine learning?",
+    "answer": "Machine learning is a branch of AI that enables computers to learn from data."
+  },
+  {
+    "question": "What is a chatbot?",
+    "answer": "A chatbot is a software application that communicates with users using natural language."
+  },
+  {
+    "question": "What is NLP?",
+    "answer": "Natural Language Processing is a branch of AI that enables computers to understand and process human language."
+  },
+  {
+    "question": "What is Python?",
+    "answer": "Python is a high-level programming language known for its simple syntax and versatility."
+  },
+  {
+    "question": "What is JavaScript?",
+    "answer": "JavaScript is a programming language commonly used to create interactive web applications."
+  },
+  {
+    "question": "What is an API?",
+    "answer": "An API is a set of rules that allows different software applications to communicate with each other."
+  },
+  {
+    "question": "What is a database?",
+    "answer": "A database is an organized collection of data that can be stored, managed, and retrieved efficiently."
+  },
+  {
+    "question": "What is cloud computing?",
+    "answer": "Cloud computing provides computing services such as storage and processing over the internet."
+  },
+  {
+    "question": "What is a programming language?",
+    "answer": "A programming language is used to give instructions to a computer to perform specific tasks."
+  },
+  {
+    "question": "What is the capital of India?",
+    "answer": "The capital of India is New Delhi."
+  },
+  {
+    "question": "How many days are there in a week?",
+    "answer": "There are seven days in a week."
+  },
+  {
+    "question": "How many months are there in a year?",
+    "answer": "There are twelve months in a year."
+  },
+  {
+    "question": "What should I eat today?",
+    "answer": "You can choose a balanced meal with vegetables, protein, and carbohydrates based on your preferences."
+  },
+  {
+    "question": "What is the weather like?",
+    "answer": "I can help you check the weather if you provide your location."
+  },
+  {
+    "question": "What time is it?",
+    "answer": "I can help you find the current time based on your location."
+  },
+  {
+    "question": "I am hungry",
+    "answer": "You should have a nutritious meal or a healthy snack."
+  },
+  {
+    "question": "I cannot sleep",
+    "answer": "Try relaxing, avoiding screens for some time, and creating a calm environment for sleep."
+  },
+  {
+    "question": "I have an exam tomorrow",
+    "answer": "Create a short study plan, focus on important topics, and remember to get enough rest."
+  },
+  {
+    "question": "How can I study better?",
+    "answer": "Set clear goals, study in focused sessions, take short breaks, and revise regularly."
+  },
+  {
+    "question": "I need motivation",
+    "answer": "Believe in yourself and take one small step at a time. Progress is more important than perfection."
+  },
+  {
+    "question": "What is GitHub?",
+    "answer": "GitHub is a platform used to store, manage, and collaborate on software projects using Git."
+  },
+  {
+    "question": "What is a repository?",
+    "answer": "A repository is a storage location for a project, including its source code, files, and version history."
+  },
+  {
+    "question": "What is HTML?",
+    "answer": "HTML is a markup language used to structure content on web pages."
+  },
+  {
+    "question": "What is CSS?",
+    "answer": "CSS is used to style and design the appearance of web pages."
+  },
+  {
+    "question": "What is a frontend?",
+    "answer": "The frontend is the part of an application that users see and interact with."
+  },
+  {
+    "question": "What is a backend?",
+    "answer": "The backend handles server-side logic, data processing, and communication with databases or other services."
+  },
+  {
+    "question": "What is a server?",
+    "answer": "A server is a computer or system that provides services and resources to other devices or applications."
+  },
+  {
+    "question": "What is a database used for?",
+    "answer": "A database is used to store, organize, manage, and retrieve data efficiently."
+  },
+  {
+    "question": "What is a conversation history?",
+    "answer": "Conversation history is a record of previous interactions between a user and an AI chatbot."
+  },
+  {
+    "question": "How does conversation history work?",
+    "answer": "User prompts and AI responses are stored and can later be retrieved to view previous interactions."
+  },
+  {
+    "question": "Can you remember our conversation?",
+    "answer": "I can use stored conversation history to retrieve previous questions and responses when the system is designed to support this feature."
+  },
+  {
+    "question": "What was my previous question?",
+    "answer": "Your previous question can be retrieved from the stored conversation history."
+  },
+  {
+    "question": "Show me my chat history",
+    "answer": "Previous conversations can be displayed by retrieving the stored prompts and responses from the conversation history."
   }
 ]
