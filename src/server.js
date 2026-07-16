@@ -1,45 +1,36 @@
-const express = require("express");
+const submitBtn = document.getElementById("submitBtn");
+const userInput = document.getElementById("userInput");
+const response = document.getElementById("response");
+const loading = document.getElementById("loading");
 
-const app = express();
+submitBtn.addEventListener("click", async () => {
+    const prompt = userInput.value;
 
-app.use(express.json());
-// Chat API Endpoint
-app.post("/api/chat", (req, res) => {
-    const prompt = req.body.prompt;
+    if (prompt.trim() === "") {
+        response.innerHTML = "Please enter a message.";
+        return;
+    }
 
-    res.json({
-        response: "AI response generated"
-    });
-});
-// History API
-app.get("/api/history", (req, res) => {
-    res.json({
-        history: []
-    });
-});
+    loading.style.display = "block";
 
-// Users API
-app.get("/api/users", (req, res) => {
-    res.json({
-        users: []
-    });
-});
+    try {
+        const result = await fetch("/api/chat", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                prompt: prompt
+            })
+        });
 
-// Feedback API
-app.post("/api/feedback", (req, res) => {
-    res.json({
-        message: "Feedback stored successfully"
-    });
-});
+        const data = await result.json();
 
-// Health Check API
-app.get("/api/health", (req, res) => {
-    res.json({
-        status: "Server is running"
-    });
-});
-const PORT = 3000;
+        response.innerHTML = data.response || "No response received.";
+    } catch (error) {
+        response.innerHTML = "Error connecting to the server.";
+        console.error(error);
+    }
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    loading.style.display = "none";
 });
