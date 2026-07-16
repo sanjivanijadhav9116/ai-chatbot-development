@@ -16,7 +16,15 @@ Design API endpoints that expose the AI chatbot functionality.
 ## Endpoint Details
 
 ### 1. POST /api/chat
-**Purpose:** Sends a user's message to the AI model and returns a generated response.
+
+**Purpose:** Receives a user prompt from the frontend, sends it to the AI model layer, and returns the generated response.
+
+**Request Body:**
+
+```json
+{
+  "prompt": "Hello"
+}
 
 ### 2. GET /api/history
 **Purpose:** Retrieves the conversation history of the chatbot.
