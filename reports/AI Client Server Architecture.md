@@ -16,13 +16,25 @@ The AI Model Layer is the core intelligence of the chatbot. It understands user 
 The Database Layer stores chatbot datasets, user information (if required), chat history, and other application data. It also retrieves information whenever requested by the server.
 
 ## Working Flow
-1. User enters a message.
-2. Client Layer sends the request to the Server Layer.
-3. Server Layer forwards the request to the AI Model Layer.
-4. AI Model processes the request and generates a response.
-5. Server Layer accesses the Database Layer if needed.
-6. Server Layer sends the response back to the Client Layer.
-7. Client Layer displays the response to the user.
 
+1. User enters a message in the chatbot interface.
+
+2. The Client Layer sends the user's prompt to the Backend Server using the `POST /api/chat` API endpoint.
+
+3. The Backend Server receives the prompt from the client.
+
+4. The Backend Server sends the prompt to the AI Model Layer for processing.
+
+5. The AI Model Layer processes the prompt and generates an AI response.
+
+6. The generated response is returned to the Backend Server.
+
+7. The Backend Server sends the AI-generated response back to the Client Layer.
+
+8. The Client Layer displays the generated response to the user.
+
+### Architecture Flow
+
+User → Client Layer → Backend Server → AI Model Layer → Backend Server → Client Layer → User
 ## Conclusion
 The AI Client-Server Architecture provides a structured approach for developing AI applications. Each layer has a specific responsibility, ensuring smooth communication, efficient processing, and reliable response generation.
