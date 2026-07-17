@@ -60,6 +60,7 @@ It can be added in the future to store:
 
 ## Architecture Flow
 
+```text
 User
   ↓
 Client Layer
