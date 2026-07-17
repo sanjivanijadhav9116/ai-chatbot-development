@@ -1,102 +1,121 @@
-API Specification Document
+# API Specification Document
 
-Objective
+## Objective
 
-Design API endpoints that expose the AI chatbot functionality and enable communication between the frontend, backend server, AI model layer, and other application services.
+To design and document API endpoints that enable communication between the frontend client, backend server, and Google Gemini AI model in the AI chatbot application.
 
-API Endpoints
+The APIs provide structured communication between different components of the application and support chatbot functionality, server health monitoring, and future application features.
 
-Endpoint| Method| Purpose
-"/api/chat"| POST| Send prompts to the AI chatbot and receive AI-generated responses.
-"/api/history"| GET| Retrieve previous conversations.
-"/api/users"| GET| Fetch user information.
-"/api/feedback"| POST| Store user ratings and feedback.
-"/api/health"| GET| Check whether the API server is running properly.
+---
 
-Endpoint Details
+## API Endpoints
 
-1. POST /api/chat
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/api/chat` | POST | Send prompts to the AI chatbot and receive AI-generated responses. |
+| `/api/history` | GET | Provide an endpoint for future conversation history functionality. |
+| `/api/users` | GET | Provide an endpoint for future user-related functionality. |
+| `/api/feedback` | POST | Provide an endpoint for future user feedback functionality. |
+| `/api/health` | GET | Check whether the API server is running properly. |
 
-Purpose: Receives a user prompt from the frontend, sends it to the AI model layer, and returns the generated response.
+---
 
-Request Body:
+# Endpoint Details
 
+## 1. POST /api/chat
+
+### Purpose
+
+Receives a user prompt from the frontend, sends it to the Google Gemini AI model, and returns the generated AI response.
+
+### Request Body
+
+```json
 {
   "prompt": "Hello"
 }
+Processing Flow
+The frontend sends the user's prompt to the /api/chat endpoint.
+The backend receives and validates the prompt.
+The backend sends the prompt to the Google Gemini AI model.
+The Google Gemini AI model processes the prompt and generates a response.
+The generated response is returned to the backend.
+The backend sends the AI-generated response back to the frontend.
+The frontend displays the response to the user.
+Successful Response
+{
+  "response": "Artificial intelligence is..."
+}
+Error Response
 
-Processing Flow:
-
-1. The frontend sends the user's prompt to the "/api/chat" endpoint.
-2. The backend receives the prompt.
-3. The backend sends the prompt to the AI model layer.
-4. The AI model processes the prompt and generates a response.
-5. The generated response is returned to the backend.
-6. The backend sends the response back to the frontend.
-7. The frontend displays the response to the user.
-
-Response:
+If no prompt is provided:
 
 {
-  "response": "AI Response: You asked..."
+  "error": "Prompt is required"
 }
 
----
+If the AI model fails to generate a response:
 
+{
+  "error": "AI model failed to generate a response"
+}
 2. GET /api/history
+Purpose
 
-Purpose: Retrieves the conversation history of the chatbot.
+Provides an endpoint for future conversation history functionality.
 
-Response:
+The current implementation returns an empty history array because persistent conversation storage has not been implemented.
 
+Response
 {
   "history": []
 }
-
----
-
 3. GET /api/users
+Purpose
 
-Purpose: Fetches user details from the system.
+Provides an endpoint for future user-related functionality.
 
-Response:
+The current implementation returns an empty users array because user management and authentication have not been implemented.
 
+Response
 {
   "users": []
 }
-
----
-
 4. POST /api/feedback
+Purpose
 
-Purpose: Stores user feedback and ratings about the chatbot.
+Provides an endpoint for future user feedback functionality.
 
-Response:
+The current implementation returns a confirmation message. Persistent feedback storage has not been implemented.
 
+Response
 {
   "message": "Feedback stored successfully"
 }
-
----
-
 5. GET /api/health
+Purpose
 
-Purpose: Checks if the API service is active and functioning correctly.
+Checks whether the API service is active and functioning correctly.
 
-Response:
-
+Response
 {
   "status": "Server is running"
 }
-
 Client-Server Communication
 
-The frontend communicates with the backend using the Fetch API. The user's prompt is sent to the "/api/chat" endpoint using a POST request.
+The frontend communicates with the backend using the JavaScript Fetch API.
 
-The backend processes the request and sends the prompt to the AI model layer. The generated response is then returned to the frontend and displayed to the user.
+The user's prompt is sent to the /api/chat endpoint using a POST request.
+
+The request contains the prompt in JSON format:
+
+{
+  "prompt": "User input"
+}
+
+The backend processes the request and sends the prompt to the Google Gemini AI model. The generated response is then returned to the frontend and displayed to the user.
 
 End-to-End AI Workflow
-
 User
   ↓
 Frontend Client
@@ -105,16 +124,19 @@ POST /api/chat
   ↓
 Backend Server
   ↓
-AI Model Layer
+Google Gemini AI Model
   ↓
-Generated Response
+Generated AI Response
   ↓
 Backend Server
   ↓
 Frontend Client
   ↓
 User
+## Conclusion
 
-Conclusion
+The API endpoints provide a structured communication interface between the frontend client, backend server, and Google Gemini AI model.
 
-These API endpoints provide the essential communication interface between the client application, backend server, AI model layer, and database. The "/api/chat" endpoint enables the complete end-to-end AI workflow by receiving a prompt from the client, processing it through the AI model layer, and returning the generated response to the user.
+The /api/chat endpoint enables the complete end-to-end AI workflow by receiving a prompt from the client, processing it through the Google Gemini AI model, and returning the generated response to the user.
+
+The additional API endpoints provide a foundation for future features such as conversation history, user management, and feedback storage.
