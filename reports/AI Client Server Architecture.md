@@ -80,6 +80,7 @@ Backend Server
 Client Layer
   ↓
 User
+
 ## Conclusion
 
 The AI Client-Server Architecture provides a structured approach for developing an AI chatbot application. Each layer has a specific responsibility, ensuring smooth communication between the user interface, backend server, and AI model.
