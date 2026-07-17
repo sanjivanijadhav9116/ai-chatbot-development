@@ -58,7 +58,7 @@ It can be added in the future to store:
 
 8. The Client Layer displays the generated response to the user.
 
-### Architecture Flow
+## Architecture Flow
 
 ```text
 User
@@ -80,6 +80,7 @@ Backend Server
 Client Layer
   ↓
 User
+
 
 ## Conclusion
 
