@@ -57,6 +57,11 @@ It can be added in the future to store:
 7. The Backend Server sends the AI-generated response back to the Client Layer.
 
 8. The Client Layer displays the generated response to the user.
+   ## Conclusion
+
+The AI Client-Server Architecture provides a structured approach for developing an AI chatbot application. Each layer has a specific responsibility, ensuring smooth communication between the user interface, backend server, and AI model.
+
+The architecture allows the system to receive user prompts, process them through the Google Gemini AI model, and return AI-generated responses to the user through the frontend interface.
 
 ## Architecture Flow
 
@@ -80,6 +85,7 @@ Backend Server
 Client Layer
   ↓
 User
+\```text
 
 ## Conclusion
 
